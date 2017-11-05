@@ -103,11 +103,18 @@ else if(self.exercisecontrol.selectedSegmentIndex ==1)
     UIAlertController * AddExE =[UIAlertController alertControllerWithTitle:@"Exercise" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     [AddExE addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"name";
+        textField.keyboardType=UIKeyboardTypeAlphabet;
+        
     }];
     [AddExE addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"Time";
+          textField.keyboardType=UIKeyboardTypeNumbersAndPunctuation;
+        
+        
     }];
     [AddExE addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        
+        textField.keyboardType=UIKeyboardTypeNumbersAndPunctuation;
         textField.placeholder = @"Calories";
     }];
     
