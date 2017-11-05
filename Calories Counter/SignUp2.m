@@ -44,7 +44,7 @@
         NSArray *rs=[dbmanager loadDataFromDB:[[NSString alloc]initWithFormat:@"select * from userInfo where email='%@';",[SignUp1 Email]]];
         if(rs.count==0)
         {
-        [dbmanager executeQuery:[NSString stringWithFormat: @"insert into userInfo values ('%@','%@','%@','%@','%c','%f','%f','%f','%ld','%@');",[SignUp1 Name] ,[SignUp1 Email],[SignUp1 password],[SignUp1 BirthDay],[SignUp1 Gender],Weight.text.floatValue,TargetWeight.text.floatValue,hieght.text.floatValue,time.text.integerValue,[ID text]]];
+        [dbmanager executeQuery:[NSString stringWithFormat: @"insert into userInfo values ('%@','%@','%@','%@','%c','%f','%f','%f','%d','%@');",[SignUp1 Name] ,[SignUp1 Email],[SignUp1 password],[SignUp1 BirthDay],[SignUp1 Gender],Weight.text.floatValue,TargetWeight.text.floatValue,hieght.text.floatValue,time.text.intValue,[ID text]]];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:[SignUp1 Email] forKey:@"email"];

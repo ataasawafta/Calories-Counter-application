@@ -16,7 +16,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
   UNUserNotificationCenter  *center =[UNUserNotificationCenter currentNotificationCenter];
-    center.delegate=self;
+    //center.delegate=self;
     return YES;
 }
 

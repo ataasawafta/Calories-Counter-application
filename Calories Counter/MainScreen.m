@@ -145,7 +145,7 @@ bool check =false;
     
   
     float i=(count-countex);
-     _remainingCalories.text=[[NSString alloc]initWithFormat:@"remaining calories =%d",(int)i];
+     _remainingCalories.text=[[NSString alloc]initWithFormat:@"remaining calories =%d", (int)(calperday-i)];
     float j,k,q;
     j=calperday+(calperday*.5);
        
