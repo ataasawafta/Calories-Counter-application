@@ -80,7 +80,7 @@ self.navigationController.title=@"Exercise";
     UIAlertController * selectedcell=[UIAlertController alertControllerWithTitle:name message:[[NSString alloc]initWithFormat:@""] preferredStyle:UIAlertControllerStyleAlert];
     
     [selectedcell addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        NSArray *r=[dbmanager loadDataFromDB:[[NSString alloc]initWithFormat:@"select * from Exercise where ExerciseName='%@' and email='%@'and datef='%@'",name,email,[MainScreen currentDate]]];
+        NSArray *r=[dbmanager loadDataFromDB:[[NSString alloc]initWithFormat:@"select * from Exercise where exerciseName='%@' and email='%@'and datef='%@'",name,email,[MainScreen currentDate]]];
         textField.placeholder = r[0][2];
     }];
     
@@ -89,7 +89,7 @@ self.navigationController.title=@"Exercise";
                               if(![selectedcell.textFields[0].text isEqualToString:@""])
                               {
                                   int data=selectedcell.textFields[0].text.intValue;
-                              NSArray *Data=[dbmanager loadDataFromDB:[[NSString alloc ]initWithFormat:@"select * from Exerciselist where execriseName='%@';",name]];
+                              NSArray *Data=[dbmanager loadDataFromDB:[[NSString alloc ]initWithFormat:@"select * from Exerciselist where ExecriseName='%@';",name]];
                                   float time =[Data[0][1] floatValue ];
                                   float cal =[Data[0][2]  floatValue];
                               float    c=(data*cal)/time;
